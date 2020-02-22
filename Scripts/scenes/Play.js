@@ -35,8 +35,8 @@ var scenes;
         Play.prototype.Start = function () {
             //instantiate a new Text object
             this.rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
-            this.leftDice = new objects.Button(config.Game.ASSETS.getResult("button"), 100, 200, true);
-            this.rightDice = new objects.Button(config.Game.ASSETS.getResult("button"), 460, 200, true);
+            this.leftDice = new objects.Button(config.Game.ASSETS.getResult("roll1"), 150, 200, true);
+            this.rightDice = new objects.Button(config.Game.ASSETS.getResult("roll1"), 460, 200, true);
             this.Main();
         };
         Play.prototype.Update = function () {
@@ -92,25 +92,6 @@ var scenes;
         };
         Play.prototype.Display = function () {
             //randonNumber();
-        };
-        // /* Utility function to check if a value falls within a range of bounds */
-        // private checkRange(value:number, lowerBounds:number, upperBounds:number){
-        //     if (value >= lowerBounds && value <= upperBounds) {
-        //         return value;
-        //     }
-        //     else {
-        //         return !value;
-        //     }
-        // }
-        // private getRandomNumber: Function = (min:number, max:number) => {
-        //     min = Math.ceil(min);
-        //     max = Math.floor(max);
-        //     return Math.floor(Math.random() * (max - min + 1)) + min;
-        // }
-        Play.prototype.randonNumber = function () {
-            var diceRoll01 = Math.floor(Math.random() * 6) + 1;
-            var diceRoll02 = Math.floor(Math.random() * 6) + 1;
-            var collectNum = [diceRoll01, diceRoll02];
         };
         return Play;
     }(objects.Scene)); //end class

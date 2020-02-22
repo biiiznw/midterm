@@ -44,8 +44,8 @@ module scenes
         {
             //instantiate a new Text object
             this.rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
-            this.leftDice= new objects.Button(config.Game.ASSETS.getResult("button"), 100, 200, true); 
-            this.rightDice= new objects.Button(config.Game.ASSETS.getResult("button"), 460, 200, true); 
+            this.leftDice= new objects.Button(config.Game.ASSETS.getResult("roll1"), 150, 200, true); 
+            this.rightDice= new objects.Button(config.Game.ASSETS.getResult("roll1"), 460, 200, true); 
             this.Main();
         }        
         
@@ -131,116 +131,12 @@ module scenes
         //     return Math.floor(Math.random() * (max - min + 1)) + min;
         // }
 
-        private randonNumber():void
-        {
-            let diceRoll01 = Math.floor(Math.random()*6) + 1;
-            let diceRoll02 = Math.floor(Math.random()*6) + 1;
-            let collectNum= [ diceRoll01, diceRoll02];
-        }
-
-        // function getImage(value:number) {
-        //     let showNumber:string;
-        //     switch(value) {
-        //         case 1:
-        //             showNumber = "roll1";
-        //             break;
-        //         case 2:
-        //             showNumber = "roll2";
-        //         break;
-        //         case 3:
-        //             showNumber= "roll3";
-        //             break;
-        //         case 4:
-        //             showNumber = "roll4";
-        //             break;
-        //         case 5: 
-        //             showNumber = "roll5";
-        //             break;
-        //         case 6: 
-        //             showNumber = "roll6";
-        //             break;
-        //         default:
-        //             showNumber = "roll1";
-        //     }
-        //     return showNumber;
-
-        
-
-
-        
-        
-
-
-        
-
-        // //#############################################################
-        // // DISPLAY SPIN RESULTS
-        // //#############################################################
-        // private DisplayResults(): void {
-        //     this.RemoveOldResult();
-        //     for (let index = 0; index < this._spinResult.length; index++) {
-        //         let result: string = this._spinResult[index];
-        //         this._reels[index] = new objects.Reel(result);
-        //         this._reels[index].x = this._reelXPonit[index];
-        //         this.addChild(this._reels[index]);
-        //     }
+        // private randonNumber():void
+        // {
+        //     let diceRoll01 = Math.floor(Math.random()*6) + 1;
+        //     let diceRoll02 = Math.floor(Math.random()*6) + 1;
+        //     let collectNum= [ diceRoll01, diceRoll02];
         // }
-
-        //#############################################################
-        // REMOVE SPIN RESULT
-        //#############################################################
-        // private RemoveOldResult() {
-            
-        //     this.removeChild(this.collectNum[ ]);
-            
-        // }
-
-        // private Dices(): string[] {
-        //     {
-        //         var betLine = [" ", " "];
-        //         var outCome = [0, 0];
-
-        //         for (var spin = 0; spin < 2; spin++) {
-        //             outCome[spin] = Math.floor((Math.random() * 65) + 1);
-        //             switch (outCome[spin]) {
-        //                 case this.checkRange(outCome[spin], 1, 6):  // 41.5% probability
-        //                     betLine[spin] = "blank";
-        //                     this._blanks++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 1, 37): // 15.4% probability
-        //                     betLine[spin] = "grapes";
-        //                     this._grapes++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 38, 46): // 13.8% probability
-        //                     betLine[spin] = "banana";
-        //                     this._bananas++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 47, 54): // 12.3% probability
-        //                     betLine[spin] = "orange";
-        //                     this._oranges++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 55, 59): //  7.7% probability
-        //                     betLine[spin] = "cherry";
-        //                     this._cherries++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 60, 62): //  4.6% probability
-        //                     betLine[spin] = "bar";
-        //                     this._bars++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 63, 64): //  3.1% probability
-        //                     betLine[spin] = "lemon";
-        //                     this._lemons++;
-        //                     break;
-        //                 case this.checkRange(outCome[spin], 65, 65): //  1.5% probability
-        //                     betLine[spin] = "seven";
-        //                     this._sevens++;
-        //                     break;
-        //             }
-        //         }
-        //         return betLine;
-        //     }
-        // }
-
 
         
     }//end class
